@@ -4,11 +4,11 @@ let handler = async function (m, { conn, text, usedPrefix, command }) {
 let fkontak = { "key": { "participants":"0@s.whatsapp.net", "remoteJid": "status@broadcast", "fromMe": false, "id": "Halo" }, "message": { "contactMessage": { "vcard": `BEGIN:VCARD\nVERSION:3.0\nN:Sy;Bot;;;\nFN:y\nitem1.TEL;waid=${m.sender.split('@')[0]}:${m.sender.split('@')[0]}\nitem1.X-ABLabel:Ponsel\nEND:VCARD` }}, "participant": "0@s.whatsapp.net" }
   let user = db.data.users[m.sender]
   let name2 = conn.getName(m.sender)
-  if (user.registered === true) throw `*[🛑Información 🛑]*\n\n*Usted ya esta registrado 🤨*\n\n*Use el siguiente comando para eliminar su registro*\n\n*${usedPrefix}unreg Número de serie*\n*Si no recuerda su número de serie , usar el siguiente comando 👇🏼*\n${usedPrefix}myns`
-  if (!Reg.test(text)) throw `${mg}👤 *Uso del comando correcto:* *${usedPrefix + command} nombre.edad*\n\n*•🚀 Ejemplo :* *${usedPrefix + command}* ${name2}.16`
+  if (user.registered === true) throw `𝗦𝘂𝗽𝗲𝗿𝗶𝗼𝗿𝗶𝘁𝘆 𝗕𝗼𝘁\n\n*Usted ya esta registrado 🤨*\n\n*Use el siguiente comando para eliminar su registro*\n\n*${usedPrefix}unreg Número de serie*\n*Si no recuerda su número de serie , usar el siguiente comando 👇🏼*\n${usedPrefix}myns`
+  if (!Reg.test(text)) throw `${mg}👤 *Uso del comando correcto:* *${usedPrefix + command} nombre.edad*`
   let [_, name, splitter, age] = text.match(Reg)
-  if (!name) throw '*[🛑 Información 🛑]*\n\n*El nombré no puede estar vacío, por favor intenta nuevamente colocando tu nombre*'
-  if (!age) throw '*[🛑 información 🛑]*\n\n*La edad no puede estar vacía*'
+  if (!name) throw '𝗦𝘂𝗽𝗲𝗿𝗶𝗼𝗿𝗶𝘁𝘆 𝗕𝗼𝘁\n\n*El nombré no puede estar vacío, por favor intenta nuevamente colocando tu nombre*'
+  if (!age) throw '𝗦𝘂𝗽𝗲𝗿𝗶𝗼𝗿𝗶𝘁𝘆 𝗕𝗼𝘁\n\n*La edad no puede estar vacía*'
   if (name.length >= 30) throw '*El nombre es demasiado largo , intenta con un nombre mas corto*' 
   age = parseInt(age)
   if (age > 100) throw '*Este bot , no acepta a viejos 👻*'
