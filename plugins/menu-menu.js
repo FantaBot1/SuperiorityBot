@@ -71,13 +71,6 @@ let taguser = '@' + m.sender.split("@s.whatsapp.net")[0]
 //let enlace = { contextInfo: { externalAdReply: {title: wm, body: 'support group' , sourceUrl: nna, thumbnail: await(await fetch(img)).buffer() }}}
   let pp = './Menu2.jpg'
 //let pp = gataVidMenu.getRandom()
-await conn.sendMessage(m.chat, {
-        text: ``,
-        contextInfo: { 
-          mentionedJid: [m.sender],
-        }
-      }, { quoted: m })
-  
 let fkontak = { "key": { "participants":"0@s.whatsapp.net", "remoteJid": "status@broadcast", "fromMe": false, "id": "Halo" }, "message": { "contactMessage": { "vcard": `BEGIN:VCARD\nVERSION:3.0\nN:Sy;Bot;;;\nFN:y\nitem1.TEL;waid=${m.sender.split('@')[0]}:${m.sender.split('@')[0]}\nitem1.X-ABLabel:Ponsel\nEND:VCARD` }}, "participant": "0@s.whatsapp.net" }
 
 let menu = `𝗦𝘂𝗽𝗲𝗿𝗶𝗼𝗿𝗶𝘁𝘆 𝗕𝗼𝘁
